@@ -1,0 +1,123 @@
+.comments-section {
+  margin-top: var(--spacing-5);
+}
+
+.comments-section h3 {
+  margin-bottom: var(--spacing-3);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.comment-input-group {
+  position: relative;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  resize: vertical;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  min-height: 80px;
+  transition: all var(--transition-speed);
+}
+
+.comment-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.comment-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  align-self: flex-end;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.comment-submit:hover:not(:disabled) {
+  background-color: var(--secondary);
+}
+
+.comment-submit:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.comment-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.comments-list {
+  margin-top: var(--spacing-4);
+}
+
+.comment-item {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.dark-theme .comment-item {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.comment-text {
+  margin-bottom: var(--spacing-2);
+  line-height: 1.5;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.no-comments {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--spacing-4);
+  font-style: italic;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: var(--spacing-2);
+}
+
+@media (max-width: 768px) {
+  .comment-submit {
+    align-self: stretch;
+  }
+}

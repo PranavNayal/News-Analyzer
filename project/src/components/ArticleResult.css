@@ -1,0 +1,130 @@
+.article-result {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.result-header {
+  margin-bottom: var(--spacing-5);
+}
+
+.analysis-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.credibility-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-5);
+}
+
+.credibility-summary {
+  width: 100%;
+  background-color: var(--surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: var(--spacing-4);
+}
+
+.credibility-summary h3 {
+  margin-bottom: var(--spacing-3);
+}
+
+.issues-section {
+  background-color: var(--surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid;
+}
+
+.issues-section h3 {
+  margin-bottom: var(--spacing-3);
+}
+
+.credibility-low {
+  border-left-color: var(--error);
+}
+
+.credibility-medium {
+  border-left-color: var(--warning);
+}
+
+.credibility-high {
+  border-left-color: var(--success);
+}
+
+.issues-list {
+  padding-left: var(--spacing-4);
+}
+
+.issues-list li {
+  margin-bottom: var(--spacing-2);
+  line-height: 1.6;
+}
+
+.article-preview {
+  background-color: var(--surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.article-preview h3 {
+  margin-bottom: var(--spacing-3);
+}
+
+.preview-content {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-sm);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.dark-theme .preview-content {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.preview-note {
+  margin-top: var(--spacing-2);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.interaction-section {
+  background-color: var(--surface);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.interaction-section h3 {
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+.article-not-found {
+  text-align: center;
+  padding: var(--spacing-8);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .article-result {
+    padding: 0 var(--spacing-2);
+  }
+  
+  .credibility-section,
+  .issues-section,
+  .article-preview,
+  .interaction-section {
+    padding: var(--spacing-3);
+  }
+}
